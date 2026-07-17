@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vape Collection Portal</title>
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#f4f7fb;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+.card{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    box-shadow:0 10px 25px rgba(0,0,0,.15);
+    width:350px;
+}
+h2{
+    text-align:center;
+    margin-bottom:25px;
+}
+select,button{
+    width:100%;
+    padding:12px;
+    margin-top:15px;
+    border-radius:8px;
+    border:1px solid #ccc;
+    font-size:16px;
+}
+button{
+    background:#0078d4;
+    color:white;
+    border:none;
+    cursor:pointer;
+}
+button:hover{
+    background:#005ea6;
+}
+#message{
+    display:none;
+    text-align:center;
+    margin-top:25px;
+    font-size:22px;
+    font-weight:bold;
+}
+</style>
+</head>
+<body>
+
+<div class="card" id="booking">
+<h2>Book Collection Slot</h2>
+
+<label>Select Date</label>
+<select>
+<option>Monday</option>
+<option>Tuesday</option>
+<option>Wednesday</option>
+<option>Thursday</option>
+<option>Friday</option>
+</select>
+
+<label>Select Time</label>
+<select>
+<option>09:00</option>
+<option>11:00</option>
+<option>13:00</option>
+<option>15:00</option>
+</select>
+
+<button onclick="book()">Book Appointment</button>
+
+<div id="message">
+😂<br><br>
+Book a slot on the site to sell the vapes.
+</div>
+
+</div>
+
+<script>
+function book(){
+document.querySelector("select").style.display="none";
+document.querySelectorAll("select")[1].style.display="none";
+document.querySelectorAll("label")[0].style.display="none";
+document.querySelectorAll("label")[1].style.display="none";
+document.querySelector("button").style.display="none";
+document.getElementById("message").style.display="block";
+}
+</script>
+
+</body>
+</html>
